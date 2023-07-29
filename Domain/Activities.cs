@@ -1,7 +1,7 @@
 
 namespace Domain
 {
-    public class Activities
+    public class Activity
     {
         public Guid Id { get; set; }
         public String Title { get; set; }
