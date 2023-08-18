@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css'
 import './app/layout/styles.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
+import { StoreContext, store } from './app/stores/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
   //removing strict mode cause of semantic ui errors
   // <React.StrictMode>
-    <App />
+    <StoreContext.Provider value={store}>
+      <App />
+    </StoreContext.Provider>
+    
   // </React.StrictMode>
 );
 
